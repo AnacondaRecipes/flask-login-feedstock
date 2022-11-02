@@ -36,7 +36,9 @@ test:
 about:
   home: https://github.com/maxcountryman/flask-login
   license: MIT
+  license_family: MIT
   license_file: LICENSE
+  license_url: https://github.com/maxcountryman/flask-login/blob/main/LICENSE
   summary: User session management for Flask
   description: |
     flask-login handles the common tasks  of logging in, logging out, and remembering your users'
