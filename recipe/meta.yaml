@@ -29,7 +29,7 @@ requirements:
 
 test:
   requires:
-    pip
+    - pip
   commands:
     - pip check
   imports:
