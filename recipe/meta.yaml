@@ -20,7 +20,7 @@ requirements:
   host:
     - python
     - pip
-    - flask
+    - flask >=1.0.4
     - wheel
 
   run:
