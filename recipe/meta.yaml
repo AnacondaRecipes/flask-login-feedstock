@@ -27,6 +27,8 @@ requirements:
     - flask
 
 test:
+  commands:
+    - pip check
   imports:
     - flask_login
 
