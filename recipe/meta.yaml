@@ -25,7 +25,7 @@ requirements:
 
   run:
     - python
-    - flask
+    - flask >=1.0.4
 
 test:
   requires:
