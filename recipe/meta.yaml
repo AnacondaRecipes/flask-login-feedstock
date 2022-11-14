@@ -26,6 +26,7 @@ requirements:
   run:
     - python
     - flask >=1.0.4
+    - werkzeug >=1.0.1
 
 test:
   requires:
