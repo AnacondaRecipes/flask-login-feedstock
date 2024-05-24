@@ -1,29 +1,25 @@
 {% set name = "Flask-Login" %}
-{% set version = "0.6.2" %}
-{% set bundle = "tar.gz" %}
+{% set version = "0.6.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  sha256: c0a7baa9fdc448cdd3dd6f0939df72eec5177b2f7abe6cb82fc934d29caac9c3
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5e23d14a607ef12806c699590b89d0f0e0d67baeec599d75947bf9c147330333
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
   skip: true  # [py<37]
 
 requirements:
   host:
     - python
     - pip
-    - flask
     - wheel
     - setuptools
-
   run:
     - python
     - flask >=1.0.4
@@ -42,13 +38,11 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  license_url: https://github.com/maxcountryman/flask-login/blob/main/LICENSE
   summary: User session management for Flask
   description: |
     flask-login handles the common tasks  of logging in, logging out, and remembering your users'
     sessions over extended periods of time.
-  doc_url: https://flask-login.readthedocs.io/en/latest/
-  doc_source_url: https://github.com/maxcountryman/flask-login/blob/main/docs/index.rst
+  doc_url: https://flask-login.readthedocs.io/
   dev_url: https://github.com/maxcountryman/flask-login
 
 extra:
